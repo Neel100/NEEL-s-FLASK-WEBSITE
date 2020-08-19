@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>{{params['blog_name']}}</h1>
+              <span class="subheading">{{params['tag_line']}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+<!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">OUR CHOICE/BEST SELLER
+        <small></small>
+      </h1>
+
+      <!-- Project One -->
+      {% for post in posts %} 
+      {% set fname = 'img/' + post.img_file %}
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="{{ url_for('static', filename=fname) }}" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>{{ post.title }}</h3>
+          <!-- <h3 class="post-subtitle">{{post.tagline}}</h3> -->
+          <p>{{post.content[0:290]}}...</p>
+          <a class="btn btn-primary" href="/post/{{post.slug}}">View Project</a>
+        </div>
+      </div>
+      <hr>
+      {% endfor %}
+      <!-- /.row -->
+
+      <hr>
+
+         <!-- Pager -->
+          <div class="clearfix">
+            <!-- <a class="btn btn-primary float-left" href="{{prev}}">&larr; Previous Page</a> -->
+            <a class="btn btn-primary float-right" href="/1">ALL RECIPES &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
