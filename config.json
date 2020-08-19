@@ -7,13 +7,13 @@
 		"blog_name":"THE STOMACH STORY",
 		"heading":"CODING MADE EASY",
 		"tag_line":"A Website Made by Neelansh For Learning Developers",
-		"gmail-user":"agarwalneelansh@gmail.com",
-		"gmail-password":"Manu007$",
+		"gmail-user":"email here",
+		"gmail-password":"password",
 		"about":"Hello My Name Is Neelansh.",
 		"no_of_posts": 2,
 		"login_image":"login.svg",
 		"admin_user":"Neelansh",
-		"admin_password": "Neel007$",
+		"admin_password": "admin password",
 		"upload_location":"C:\\Users\\Admin\\Desktop\\Flask\\static"
 		
 	}
